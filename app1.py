@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler  # Assuming this is used to sta
 
 # Load the pre-trained model
 def load_model():
-    model = tf.keras.models.load_model('/content/my_model.hdf5')
+    model = tf.keras.models.load_model('my_model.hdf5')
     return model
 
 # Instantiate scaler if needed (fit it based on your training data)
