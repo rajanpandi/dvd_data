@@ -5,8 +5,12 @@ from sklearn.preprocessing import StandardScaler  # Assuming this is used to sta
 
 # Load the pre-trained model
 def load_model():
-    model = tf.keras.models.load_model('/home/ubuntu/dvd_data/my_model.hdf5')
-
+    model_path = '/home/ubuntu/dvd_data/my_model.hdf5'  # Ensure this path is correct
+    try:
+        model = tf.keras.models.load_model(model_path)
+        print("Model loaded successfully.")
+    except Exception as e:
+        print(f"Error loading model: {e}")
     return model
 
 # Instantiate scaler if needed (fit it based on your training data)
