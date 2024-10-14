@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler  # Assuming this is used to sta
 
 # Load the pre-trained model
 def load_model():
-    model_path = 'r/home/ubuntu/dvd_data/my_model.hdf5'  # Ensure this path is correct
+    model_path = '/home/ubuntu/dvd_data/my_model.hdf5'  # Ensure this path is correct
     try:
         model = tf.keras.models.load_model(model_path)
         print("Model loaded successfully.")
